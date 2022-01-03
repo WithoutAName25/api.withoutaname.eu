@@ -51,6 +51,15 @@ tasks.test {
     finalizedBy(tasks.jacocoTestReport)
 }
 
+tasks.jacocoTestReport {
+    dependsOn(tasks.test)
+    reports {
+        csv.required.set(false)
+        html.required.set(false)
+        xml.required.set(true)
+    }
+}
+
 java {
     withJavadocJar()
     withSourcesJar()
