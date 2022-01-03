@@ -1,5 +1,3 @@
-name: Basics CI
-
 on:
   push:
     branches: [ master ]
