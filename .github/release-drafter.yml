@@ -1,0 +1,10 @@
+categories:
+  - title: 'Breaking changes'
+    label: 'breaking'
+  - title: 'Dependency updates'
+    label: 'dependencies'
+change-template: '- $TITLE (#$NUMBER @$AUTHOR)'
+change-title-escapes: '\<*_&'
+template: |
+  ## Changes
+  $CHANGES
