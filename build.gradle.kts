@@ -4,6 +4,8 @@ plugins {
     application
     kotlin("jvm") version "1.6.10"
     id("org.jetbrains.kotlin.plugin.serialization") version "1.6.10"
+    `maven-publish`
+    jacoco
 }
 
 group = "eu.withoutaname.api"
@@ -38,4 +40,45 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
+}
+
+tasks.compileKotlin {
+    kotlinOptions.jvmTarget = "17"
+}
+
+tasks.test {
+    useJUnitPlatform()
+    finalizedBy(tasks.jacocoTestReport)
+}
+
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("mavenJava") {
+            from(components["java"])
+            pom {
+                licenses {
+                    name.set("MIT License")
+                    url.set("https://opensource.org/licenses/MIT")
+                }
+            }
+        }
+    }
+    repositories {
+        maven {
+            url = uri(
+                "https://withoutaname.eu/maven/${
+                    if (version.toString().endsWith("-SNAPSHOT")) "snapshots" else "releases"
+                }"
+            )
+            credentials {
+                username = System.getenv("MAVEN_USER") ?: ""
+                password = System.getenv("MAVEN_TOKEN") ?: ""
+            }
+        }
+    }
 }
