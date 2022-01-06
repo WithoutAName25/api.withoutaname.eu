@@ -28,7 +28,7 @@ dependencies {
     implementation("org.jetbrains.exposed:exposed-core:$exposed")
     implementation("org.jetbrains.exposed:exposed-dao:$exposed")
     implementation("org.jetbrains.exposed:exposed-jdbc:$exposed")
-    implementation("mysql:mysql-connector-java:8.0.25")
+    implementation("mysql:mysql-connector-java:8.0.27")
 
     val ktor="2.0.0-beta-1"
     implementation("io.ktor:ktor-server-core:$ktor")
