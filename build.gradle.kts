@@ -24,6 +24,12 @@ dependencies {
 
     implementation("ch.qos.logback:logback-classic:1.2.10")
 
+    val exposed = "0.37.3"
+    implementation("org.jetbrains.exposed:exposed-core:$exposed")
+    implementation("org.jetbrains.exposed:exposed-dao:$exposed")
+    implementation("org.jetbrains.exposed:exposed-jdbc:$exposed")
+    implementation("mysql:mysql-connector-java:8.0.25")
+
     val ktor="2.0.0-beta-1"
     implementation("io.ktor:ktor-server-core:$ktor")
     implementation("io.ktor:ktor-server-auth:$ktor")
