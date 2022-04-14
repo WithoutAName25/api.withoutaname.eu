@@ -24,7 +24,7 @@ dependencies {
 
     implementation("ch.qos.logback:logback-classic:1.2.11")
 
-    val exposed = "0.37.3"
+    val exposed = "0.38.1"
     implementation("org.jetbrains.exposed:exposed-core:$exposed")
     implementation("org.jetbrains.exposed:exposed-dao:$exposed")
     implementation("org.jetbrains.exposed:exposed-jdbc:$exposed")
