@@ -2,8 +2,8 @@ val versionString: String by project
 
 plugins {
     application
-    kotlin("jvm") version "1.6.20"
-    id("org.jetbrains.kotlin.plugin.serialization") version "1.6.20"
+    kotlin("jvm") version "1.6.21"
+    id("org.jetbrains.kotlin.plugin.serialization") version "1.6.21"
     `maven-publish`
     jacoco
 }
@@ -30,7 +30,7 @@ dependencies {
     implementation("org.jetbrains.exposed:exposed-jdbc:$exposed")
     implementation("mysql:mysql-connector-java:8.0.28")
 
-    val ktor="2.0.0-beta-1"
+    val ktor= "2.0.0"
     implementation("io.ktor:ktor-server-core:$ktor")
     implementation("io.ktor:ktor-server-auth:$ktor")
     implementation("io.ktor:ktor-server-sessions:$ktor")
