@@ -1,7 +1,7 @@
 package eu.withoutaname.api.plugins
 
 import io.ktor.server.application.*
-import io.ktor.server.plugins.*
+import io.ktor.server.plugins.callloging.*
 import io.ktor.server.request.*
 import org.slf4j.event.Level
 
