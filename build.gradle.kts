@@ -31,7 +31,7 @@ dependencies {
     implementation("org.jetbrains.exposed:exposed-jdbc:$exposed")
     implementation("mysql:mysql-connector-java:8.0.29")
 
-    val ktor= "2.0.2"
+    val ktor= "2.0.3"
     implementation("io.ktor:ktor-server-core:$ktor")
     implementation("io.ktor:ktor-server-auth:$ktor")
     implementation("io.ktor:ktor-server-sessions:$ktor")
