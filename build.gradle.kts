@@ -2,7 +2,7 @@ val versionString: String by project
 
 plugins {
     application
-    val kotlinVersion = "1.7.0"
+    val kotlinVersion = "1.7.10"
     kotlin("jvm") version "$kotlinVersion"
     id("org.jetbrains.kotlin.plugin.serialization") version "$kotlinVersion"
     `maven-publish`
